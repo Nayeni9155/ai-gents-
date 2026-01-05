@@ -41,4 +41,20 @@ The system can search and book **real flights**, **real hotels**, handle **payme
 ---
 
 ## 🏗️ System Architecture
+User
+│
+▼
+Streamlit UI
+│
+▼
+FastAPI Gateway
+│
+▼
+Coordinator Agent (LangGraph + Memory)
+├── Flight Agent → Amadeus API
+├── Hotel Agent → Booking.com API
+└── Payment Agent → Stripe
+│
+▼
+MCP Server (Tool Registry)
 
